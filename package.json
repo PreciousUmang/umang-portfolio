@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-  "name": "umang-portfolio",
-  "homepage": "https://preciousumang.github.io/umang-portfolio/",
-=======
   "name": "personal-portfolio",
   "homepage": "https://PreciousUmang.github.io/umang-portfolio/",
->>>>>>> 7e10ba07f40afc52ac1973da283a769bb433bde1
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,12 +9,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview --port 8080",
     "lint": "eslint .",
-<<<<<<< HEAD
-    "predeploy": "npm run dev",
-=======
-    "preview": "vite preview",
     "predeploy":"npm run dev",
->>>>>>> 7e10ba07f40afc52ac1973da283a769bb433bde1
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
