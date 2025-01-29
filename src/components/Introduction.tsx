@@ -13,17 +13,15 @@ function Introduction() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          HELLO! MY NAME IS
+          HELLO! I AM
         </motion.h2>
         <motion.h2
-          className='mt-5 font-bold text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] tracking-widest'
+          className='my-5 font-bold text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] tracking-widest'
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          UMANG
-          <br />
-          RATHOUR
+         PRECIOUS,
         </motion.h2>
         <motion.img
           src={profileImage}
