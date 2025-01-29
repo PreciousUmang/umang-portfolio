@@ -2,9 +2,11 @@ import { motion } from 'framer-motion';
 import logo from '../../public/logo.png';
 import { navItems } from '../utils/items';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <motion.div
       className='z-50 fixed flex justify-between items-center bg-white border-b-[1px] w-full'
@@ -25,14 +27,29 @@ const Header = () => {
       <div className='md:flex gap-14 hidden'>
         {navItems.map(item => (
           <motion.div 
-            className='font-medium hover:underline hover:underline-offset-8 cursor-pointer'
+            className={`relative font-medium text-gray-800 cursor-pointer ${location.pathname === item.link ? 'text-green-500' : 'hover:text-green-500'}`}
             key={item.id}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: item.id * 0.1 }}
           >
-            <Link to={item.link}>
+            <Link to={item.link} className='text-gray-800'>
               <h2>{item.name}</h2>
+              {location.pathname === item.link && (
+                <>
+                  <motion.div
+                    className='top-1/2 -left-5 absolute bg-green-500 rounded-full w-2 h-2 transform -translate-y-1/2'
+                    layoutId="activeIndicator"
+                  />
+                  <motion.div
+                    className='right-0 -bottom-2 left-0 absolute bg-green-500 h-0.5'
+                    layoutId="activeBorder"
+                    initial={{ width: 0 }}
+                    animate={{ width: '100%' }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </>
+              )}
             </Link>
           </motion.div>
         ))}
