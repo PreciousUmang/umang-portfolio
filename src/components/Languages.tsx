@@ -42,7 +42,7 @@ const Languages = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2.5 }}
           viewport={{ once: true }}
-          className='flex justify-between items-center mx-16'
+          className='flex justify-between items-center mx-16 mt-16'
         >
           {languages.map((language, langIndex) => {
             const ref = useRef(null);

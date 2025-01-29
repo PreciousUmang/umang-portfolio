@@ -1,12 +1,26 @@
 import { skills } from '../utils/skills';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import { LinearProgress, Box, Typography } from '@mui/material';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 const Skills = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
+  const [progress, setProgress] = useState(skills.map(() => 0));
+
+  useEffect(() => {
+    if (inView) {
+      const interval = setInterval(() => {
+        setProgress(prevProgress =>
+          prevProgress.map((value, index) =>
+            value < skills[index].proficiency ? value + 1 : value
+          )
+        );
+      }, 20);
+
+      return () => clearInterval(interval);
+    }
+  }, [inView]);
 
   return (
     <>
@@ -24,7 +38,7 @@ const Skills = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 2.5 }}
-          className='gap-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-16'
+          className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-16 mt-16'
         >
           {skills.map((skill, index) => (
             <motion.div
@@ -36,18 +50,16 @@ const Skills = () => {
             >
               <skill.logo className='mb-2 text-4xl' />
               <h2 className='font-semibold text-xl'>{skill.name}</h2>
-              <div className='relative mt-2 w-16 h-16'>
+              <div className='relative mt-2 w-full'>
                 {inView && (
-                  <CircularProgressbar
-                    value={skill.proficiency}
-                    text={`${skill.proficiency}%`}
-                    styles={buildStyles({
-                      pathColor: '#4caf50',
-                      textColor: '#000',
-                      trailColor: '#ffffff',
-                      pathTransitionDuration: 1.4
-                    })}
-                  />
+                  <Box display="flex" alignItems="center" width="100%">
+                    <Box width="100%" mr={1}>
+                      <LinearProgress variant="determinate" value={progress[index]} />
+                    </Box>
+                    <Box minWidth={35}>
+                      <Typography variant="body2" color="textSecondary">{`${progress[index]}%`}</Typography>
+                    </Box>
+                  </Box>
                 )}
               </div>
             </motion.div>
