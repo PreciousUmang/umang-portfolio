@@ -1,11 +1,15 @@
 import { skills } from '../utils/skills';
 import { LinearProgress, Box, Typography } from '@mui/material';
-import { motion, useInView } from 'framer-motion';
-import { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import useInViewAnimation from '../hooks/useInViewAnimation';
 
 const Skills = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
+  const { ref, initial, animate, transition, inView } = useInViewAnimation(
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0 },
+    { duration: 2.5 }
+  );
   const [progress, setProgress] = useState(skills.map(() => 0));
 
   useEffect(() => {
@@ -35,35 +39,41 @@ const Skills = () => {
 
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 2.5 }}
-          className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-16 mt-16'
+          initial={initial}
+          animate={animate}
+          transition={transition}
+          className='flex flex-wrap justify-center items-center w-full'
         >
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              className='flex flex-col items-center mt-8'
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <skill.logo className='mb-2 text-4xl' />
-              <h2 className='font-semibold text-xl'>{skill.name}</h2>
-              <div className='relative mt-2 w-full'>
-                {inView && (
-                  <Box display="flex" alignItems="center" width="100%">
-                    <Box width="100%" mr={1}>
-                      <LinearProgress variant="determinate" value={progress[index]} />
+          {skills.map((skill, index) => {
+            const skillAnimationProps = useInViewAnimation(
+              { opacity: 0, y: 20 },
+              { opacity: 1, y: 0 },
+              { duration: 0.5, delay: index * 0.2 }
+            );
+
+            return (
+              <motion.div
+                key={index}
+                className='flex flex-col items-center mt-8 px-4 w-full md:w-1/2 lg:w-1/3'
+                {...skillAnimationProps}
+              >
+                <skill.logo className='mb-2 text-4xl' />
+                <h2 className='font-semibold text-xl'>{skill.name}</h2>
+                <div className='relative mt-2 w-full'>
+                  {inView && (
+                    <Box className='flex justify-center items-center w-full'>
+                      <Box width="100%" mr={1}>
+                        <LinearProgress variant="determinate" value={progress[index]} color='primary' sx={{ '& .MuiLinearProgress-bar': { backgroundColor: '#22c55e' }}}/>
+                      </Box>
+                      <Box minWidth={35}>
+                        <Typography variant="body2" color="textSecondary">{`${progress[index]}%`}</Typography>
+                      </Box>
                     </Box>
-                    <Box minWidth={35}>
-                      <Typography variant="body2" color="textSecondary">{`${progress[index]}%`}</Typography>
-                    </Box>
-                  </Box>
-                )}
-              </div>
-            </motion.div>
-          ))}
+                  )}
+                </div>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </>
