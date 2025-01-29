@@ -8,7 +8,7 @@ import Skills from '../components/Skills'
 import Reviews from '../components/Reviews'
 import GetStarted from '../components/GetStarted'
 
-function HomePage () {
+function Home () {
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 ml-[90px]'>
       <div className='col-span-2 p-5'>
@@ -28,4 +28,4 @@ function HomePage () {
   )
 }
 
-export default HomePage
+export default Home;

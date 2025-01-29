@@ -3,6 +3,7 @@ import { CircularProgress, Box, Typography } from '@mui/material';
 import { languages } from '../utils/languages';
 import { useEffect, useState } from 'react';
 import useInViewAnimation from '../hooks/useInViewAnimation';
+import { Link } from 'react-router-dom';
 
 const Languages = () => {
   const [progress, setProgress] = useState(
@@ -60,29 +61,31 @@ const Languages = () => {
                 <h2 className='font-semibold text-xl'>{language.name}</h2>
                 <div className='flex flex-wrap justify-center items-center w-full'>
                   <div className='flex flex-col items-center mx-4 mt-4'>
-                    <Box className='inline-flex relative mt-4'>
-                      <CircularProgress
-                        variant="determinate"
-                        value={progress[langIndex][0]}
-                        size={100}
-                        thickness={1}
-                        sx={{ color: language.skills[0].color }}
-                      />
-                      <Box
-                        top={0}
-                        left={0}
-                        bottom={0}
-                        right={0}
-                        position="absolute"
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                      >
-                        <Typography>
-                          {`${progress[langIndex][0]}%`}
-                        </Typography>
+                    <Link to='/#skills'>
+                      <Box className='inline-flex relative mt-4'>
+                        <CircularProgress
+                          variant="determinate"
+                          value={progress[langIndex][0]}
+                          size={100}
+                          thickness={1}
+                          sx={{ color: language.skills[0].color }}
+                        />
+                        <Box
+                          top={0}
+                          left={0}
+                          bottom={0}
+                          right={0}
+                          position="absolute"
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
+                        >
+                          <Typography>
+                            {`${progress[langIndex][0]}%`}
+                          </Typography>
+                        </Box>
                       </Box>
-                    </Box>
+                    </Link>
                   </div>
                 </div>
               </motion.div>

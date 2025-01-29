@@ -1,8 +1,10 @@
-import { motion } from 'framer-motion'
-import logo from '../../public/logo.png'
-import { navItems } from '../utils/items'
+import { motion } from 'framer-motion';
+import logo from '../../public/logo.png';
+import { navItems } from '../utils/items';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Header () {
+const Header = () => {
   return (
     <motion.div
       className='z-50 fixed flex justify-between items-center bg-white border-b-[1px] w-full'
@@ -29,7 +31,9 @@ function Header () {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: item.id * 0.1 }}
           >
-            <h2>{item.name}</h2>
+            <Link to={item.link}>
+              <h2>{item.name}</h2>
+            </Link>
           </motion.div>
         ))}
       </div>
@@ -50,7 +54,7 @@ function Header () {
         </svg>
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Header
+export default React.memo(Header);
