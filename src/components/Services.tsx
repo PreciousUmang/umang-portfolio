@@ -39,7 +39,7 @@ const Services = () => {
               <h2 className='mt-5 font-bold'>{service.title}</h2>
               <h2 className='text-gray-400'>{service.desc}</h2>
               <Link to={`/services/`}>
-                <IoArrowForwardOutline className='bottom-0 absolute bg-green-500 p-2 rounded-full text-[35px] text-white transition-all cursor-pointer hover:scale-110' />
+                <IoArrowForwardOutline className='bottom-0 left-1/2 absolute bg-green-500 p-2 rounded-full text-[35px] text-white transform transition-all -translate-x-1/2 cursor-pointer hover:scale-110' />
               </Link>
             </motion.div>
           )
