@@ -2,6 +2,7 @@ import { FaEnvelope } from 'react-icons/fa';
 import { SiLinkedin, SiUpwork, SiFreelancer } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
+import useInViewAnimation from '../hooks/useInViewAnimation';
 
 const Contact = () => {
   const iconVariants = (color: string) => ({
@@ -45,8 +46,14 @@ const Contact = () => {
     };
   }, []);
 
+  const animationProps = useInViewAnimation(
+    { opacity: 0, y: 0 },
+    { opacity: 1, y: 0 },
+    { duration: 1, delay: 0.5}
+  );
+
   return (
-    <div className='relative flex flex-col justify-center items-center px-4 md:px-8 pt-[90px] w-full md:w-[calc(100vw-var(--sidebar-width))] min-h-[calc(100vh-var(--header-height)-var(--footer-height))] overflow-hidden overflow-x-hidden'>
+    <motion.div {...animationProps} className='relative flex flex-col justify-center items-center px-4 md:px-8 pt-[90px] w-full md:w-[calc(100vw-var(--sidebar-width))] min-h-[calc(100vh-var(--header-height)-var(--footer-height))] overflow-hidden overflow-x-hidden'>
       <div className='relative flex justify-center items-center w-[200px] sm:w-[300px] h-[200px] sm:h-[300px]'>
         <motion.div
           className='absolute text-gray-500'
@@ -101,7 +108,7 @@ const Contact = () => {
           <SiUpwork className='text-3xl text-green-500 sm:text-4xl' />
         </motion.a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
