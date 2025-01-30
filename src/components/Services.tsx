@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { services } from '../utils/Services'
 import { IoArrowForwardOutline } from 'react-icons/io5'
-import useInViewAnimation from '../hooks/useInViewAnimation';
+import useInViewAnimation from '../hooks/useInViewAnimation'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
   return (
@@ -19,10 +20,10 @@ const Services = () => {
             { opacity: 0, y: 20 },
             { opacity: 1, y: 0 },
             { duration: 0.5, delay: service.id * 0.2 }
-          );
+          )
 
           return (
-            <motion.div 
+            <motion.div
               className='relative flex flex-col items-center gap-4 mb-8 lg:mb-0 px-2 pb-12 text-center'
               key={service.id}
               {...animationProps}
@@ -37,7 +38,9 @@ const Services = () => {
               </div>
               <h2 className='mt-5 font-bold'>{service.title}</h2>
               <h2 className='text-gray-400'>{service.desc}</h2>
-              <IoArrowForwardOutline className='bottom-0 absolute bg-green-500 p-2 rounded-full text-[35px] text-white transition-all cursor-pointer hover:scale-110'/>
+              <Link to={`/services/`}>
+                <IoArrowForwardOutline className='bottom-0 absolute bg-green-500 p-2 rounded-full text-[35px] text-white transition-all cursor-pointer hover:scale-110' />
+              </Link>
             </motion.div>
           )
         })}

@@ -3,7 +3,7 @@ import Introduction from '../components/Introduction'
 import About from '../components/About'
 import Services from '../components/Services'
 import ProgressBar from '../components/ProgressBar'
-import Languages from '../components/Languages'
+import Certificates from '../components/Certificates'
 import Skills from '../components/Skills'
 import Reviews from '../components/Reviews'
 import GetStarted from '../components/GetStarted'
@@ -16,7 +16,7 @@ function Home () {
         <About />
         <Services />
         <Skills />
-        <Languages />
+        <Certificates/>
         <Reviews />
         <GetStarted />
       </div>
