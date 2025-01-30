@@ -8,9 +8,15 @@ import {
   FaChevronRight,
   FaQuoteLeft,
 } from 'react-icons/fa'
+import useInViewAnimation from '../hooks/useInViewAnimation'
 
 const Reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const animationProps = useInViewAnimation(
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0 },
+    { duration: 0.5 }
+  )
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,7 +38,10 @@ const Reviews = () => {
   }
 
   return (
-    <div className='my-8 px-8 overflow-hidden'>
+    <motion.div
+      {...animationProps}
+      className='my-8 px-8 overflow-hidden'
+    >
       <div className='flex justify-between items-center'>
         <div className='bg-green-600 rounded-full w-[20px] h-[7px]'></div>
         <div className='border-[1px] mt-[-2px] mr-4 w-full'></div>
@@ -50,7 +59,7 @@ const Reviews = () => {
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
           >
-            <Card className='flex justify-center items-center shadow-lg rounded-lg h- sm:h-64 md:h-52 lg:h-48'>
+            <Card className='flex justify-center items-center shadow-lg rounded-lg h-[420px] sm:h-64 md:h-52 lg:h-48'>
               <CardContent className='text-center'>
                 <p className='my-4 font-bold'>{reviews[currentIndex].author}</p>
                 <FaQuoteLeft className='mx-auto text-green-500' />
@@ -69,7 +78,7 @@ const Reviews = () => {
           <FaChevronRight className='text-green-500'/>
         </button>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

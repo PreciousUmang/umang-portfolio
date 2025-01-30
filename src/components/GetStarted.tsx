@@ -1,15 +1,28 @@
+import { motion } from 'framer-motion'
+import useInViewAnimation from '../hooks/useInViewAnimation'
+import MotionButton from './MotionButton'
 function GetStarted () {
+  const animationProps = useInViewAnimation(
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0 },
+    { duration: 0.5 }
+  )
+
   return (
-    <div className='my-8 px-8'>
-    <div className='flex justify-between items-center'>
-      <div className='bg-green-600 rounded-full w-[20px] h-[7px]'></div>
-      <div className='border-[1px] mt-[-2px] mr-4 w-full'></div>
-      <h2 className='font-bold text-[24px]'>Get Started</h2>
-      <div className='border-[1px] mt-[-2px] ml-4 w-full'></div>
-      <div className='bg-green-600 rounded-full w-[20px] h-[7px]'></div>
-    </div>
-    </div>
+    <motion.div
+      {...animationProps}
+     
+    >
+      <div className='flex justify-between items-center'>
+        <div className='bg-green-600 rounded-full w-[7px] h-[7px]'></div>
+        <div className='mt-[-2px] mr-4 border-b-[1px] w-1/2'></div>
+        <div className='mt-[-2px] ml-4 border-b-[1px] w-1/2'></div>
+        <div className='bg-green-600 rounded-full w-[7px] h-[7px]'></div>
+      </div>
+      <h1  className='my-8 px-8 text-center'>Ready to get started in building something exceptional?</h1>
+      <MotionButton/>
+    </motion.div>
   )
 }
 
-export default GetStarted;
+export default GetStarted
