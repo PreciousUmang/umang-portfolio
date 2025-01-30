@@ -1,5 +1,7 @@
+import { CSSProperties } from 'react';
+
 function Services() {
-    const containerStyle = {
+    const containerStyle: CSSProperties = {
         width: '100%',
         minHeight: '100vh',
         display: 'flex',
@@ -10,7 +12,7 @@ function Services() {
         boxSizing: 'border-box'
     };
 
-    const serviceStyle = {
+    const serviceStyle: CSSProperties = {
         margin: '10px 0',
         padding: '20px',
         border: '1px solid #ccc',
