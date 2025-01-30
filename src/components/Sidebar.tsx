@@ -34,7 +34,7 @@ function Sidebar () {
             <IoLogoGithub className='cursor-pointer' />
           </motion.div>
         </a>
-        <a href='https://www.linkedin.com/u/PreciousUmang' target='_blank'>
+        <a href='https://www.linkedin.com/in/PreciousUmang' target='_blank'>
           <motion.div
             whileHover={{ scale: 1.1, color: '#0077b5', borderRadius: '50%', boxShadow: '0 0 10px rgba(0, 119, 181, 0.5)' }}
             transition={{ duration: 0.3 }}

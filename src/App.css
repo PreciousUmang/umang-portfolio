@@ -1,1 +1,19 @@
-/*  */
+:root {
+    --sidebar-width: 90px;
+    --header-height: 60px; /* Adjust this value based on your header height */
+    --footer-height: 80px; /* Adjust this value based on your footer height */
+}
+
+.full-width-minus-sidebar {
+    width: calc(100vw - var(--sidebar-width));
+}
+
+.full-height-minus-header {
+    height: calc(100vh - var(--header-height));
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}

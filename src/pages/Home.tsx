@@ -10,19 +10,21 @@ import GetStarted from '../components/GetStarted'
 
 function Home () {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 ml-[90px]'>
-      <div className='col-span-2 p-5'>
-        <Introduction />
-        <About />
-        <Services />
-        <Skills />
-        <Certificates/>
-        <Reviews />
-        <GetStarted />
-      </div>
-      <div className='md:block hidden'>
-        <ProgressBar />
-        <ProfilePic />
+    <div className='flex flex-col min-h-screen'>
+      <div className='flex-grow grid grid-cols-1 md:grid-cols-3'>
+        <div className='col-span-2 p-5'>
+          <Introduction />
+          <About />
+          <Services />
+          <Skills />
+          <Certificates/>
+          <Reviews />
+          <GetStarted />
+        </div>
+        <div className='md:block hidden'>
+          <ProgressBar />
+          <ProfilePic />
+        </div>
       </div>
     </div>
   )
