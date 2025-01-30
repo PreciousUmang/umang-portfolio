@@ -23,9 +23,10 @@ function App () {
 
       <main className='flex-grow ml-[90px] w-[calc(100vw-90px)]'>
         <Outlet />
+        <MobileNav />
       </main>
       <Footer />
-      <MobileNav />
+      
     </motion.div>
   )
 }

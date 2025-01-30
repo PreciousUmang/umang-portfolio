@@ -38,7 +38,7 @@ function Sidebar () {
           <motion.div
             whileHover={{ scale: 1.1, color: '#0077b5', borderRadius: '50%', boxShadow: '0 0 10px rgba(0, 119, 181, 0.5)' }}
             transition={{ duration: 0.3 }}
-            className='border-2 p-2 border-transparent text-gray-500'
+            className='border-2 p-2 border-transparent rounded-full text-gray-500'
           >
             <IoLogoLinkedin className='cursor-pointer' />
           </motion.div>
