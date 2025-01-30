@@ -1,7 +1,7 @@
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import { SiUpwork, SiFreelancer } from 'react-icons/si'
 import { useLocation } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function Sidebar () {
   const location = useLocation()
@@ -23,7 +23,20 @@ function Sidebar () {
 
   return (
     <div className='fixed flex flex-col justify-around items-center mt-[90px] border-r-[1px] w-[90px] h-screen'>
-      <h2 className='tracking-widest -rotate-90'>{getPageName()}</h2>
+      <div className='relative h-[20px]'>
+        <AnimatePresence>
+          <motion.h2
+            key={location.pathname}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className='left-1/2 absolute tracking-widest transform -translate-x-1/2 -rotate-90'
+          >
+            {getPageName()}
+          </motion.h2>
+        </AnimatePresence>
+      </div>
       <div className='flex flex-col gap-7 mb-10 text-[20px]'>
         <a href='https://www.github.com/PreciousUmang' target='_blank'>
           <motion.div
