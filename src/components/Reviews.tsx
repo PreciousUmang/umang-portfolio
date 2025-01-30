@@ -70,13 +70,23 @@ const Reviews = () => {
         </AnimatePresence>
       </div>
 
-      <div className='flex justify-center mt-4'>
-        <button className='mx-8 prev-btn' onClick={handlePrev}>
+      <div className='flex justify-center bg-white mt-4'>
+        <motion.button
+          className='bg-white shadow-green-500 mx-8 prev-btn'
+          onClick={handlePrev}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
           <FaChevronLeft className='text-green-500'/>
-        </button>
-        <button className='mx-8 next-btn' onClick={handleNext}>
+        </motion.button>
+        <motion.button
+          className='bg-white shadow-green-500 mx-8 next-btn'
+          onClick={handleNext}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
           <FaChevronRight className='text-green-500'/>
-        </button>
+        </motion.button>
       </div>
     </motion.div>
   )

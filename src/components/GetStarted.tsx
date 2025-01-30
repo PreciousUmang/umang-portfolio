@@ -19,7 +19,7 @@ function GetStarted () {
         <div className='mt-[-2px] ml-4 border-b-[1px] w-1/2'></div>
         <div className='bg-green-600 rounded-full w-[7px] h-[7px]'></div>
       </div>
-      <h1  className='my-8 px-8 text-center'>Ready to get started in building something exceptional?</h1>
+      <h1  className='my-8 px-16 text-center'>Ready to get started in building something exceptional?</h1>
       <MotionButton/>
     </motion.div>
   )
