@@ -1,6 +1,6 @@
 import { Variants } from 'framer-motion';
 
-const useServiceAnimation = (type: number): Variants => {
+const useIconAnimation = (type: number): Variants => {
   const baseAnimation = {
     y: [0, -20, 20, -10, 10, 0],
     x: [0, 10, -10, 20, -20, 0],
@@ -129,4 +129,4 @@ const useServiceAnimation = (type: number): Variants => {
   }
 };
 
-export default useServiceAnimation;
+export default useIconAnimation;

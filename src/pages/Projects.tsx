@@ -3,10 +3,9 @@ import { projects } from '../utils/projects';
 
 const Projects = () => {
   return (
-    <div className='relative flex flex-col justify-center items-center mt-[90px] px-4 sm:px-8 md:px-12 lg:px-16 w-[calc(100vw-var(--sidebar-width))] min-h-[calc(100vh-var(--header-height)-var(--footer-height))]'>
-      <h1 className='mb-4 font-bold text-4xl text-gray-800'>Projects</h1>
-      <p className='text-gray-800 text-lg'>Here are some of my projects:</p>
-      <div className='flex flex-wrap justify-center'>
+    <div className='flex flex-col justify-center items-center mt-[90px] px-4 sm:px-8 md:px-12 lg:px-16 w-[calc(100vw-var(--sidebar-width))] min-h-[calc(100vh-var(--header-height)-var(--footer-height))]'>
+      <h1 className='my-8 font-bold text-4xl text-gray-800'>Projects</h1>
+      <div className='gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

@@ -19,20 +19,20 @@ import {
   SiInvision
 } from 'react-icons/si'
 import { motion } from 'framer-motion'
-import useServiceAnimation from '../hooks/useServiceAnimation'
+import useIconAnimation from '../hooks/useIconAnimation'
 import useInViewAnimation from '../hooks/useInViewAnimation'
 
 function Services () {
-  const iconVariants1 = useServiceAnimation(1)
-  const iconVariants2 = useServiceAnimation(2)
-  const iconVariants3 = useServiceAnimation(3)
-  const iconVariants4 = useServiceAnimation(4)
-  const iconVariants5 = useServiceAnimation(5)
-  const iconVariants6 = useServiceAnimation(6)
-  const iconVariants7 = useServiceAnimation(7)
-  const iconVariants8 = useServiceAnimation(8)
-  const iconVariants9 = useServiceAnimation(9)
-  const iconVariants10 = useServiceAnimation(10)
+  const iconVariants1 = useIconAnimation(1)
+  const iconVariants2 = useIconAnimation(2)
+  const iconVariants3 = useIconAnimation(3)
+  const iconVariants4 = useIconAnimation(4)
+  const iconVariants5 = useIconAnimation(5)
+  const iconVariants6 = useIconAnimation(6)
+  const iconVariants7 = useIconAnimation(7)
+  const iconVariants8 = useIconAnimation(8)
+  const iconVariants9 = useIconAnimation(9)
+  const iconVariants10 = useIconAnimation(10)
 
   const inViewAnimation1 = useInViewAnimation(
     { opacity: 0, y: 20 },
@@ -84,56 +84,56 @@ function Services () {
           </ul>
           <div className='top-0 left-0 absolute w-full h-full'>
             <motion.div
-              className='top-4 left-4 absolute opacity-20 text-green-500'
+              className='top-4 left-4 absolute opacity-15 text-green-500'
               variants={iconVariants1}
               animate='animate'
             >
               <FaNodeJs size={24} />
             </motion.div>
             <motion.div
-              className='top-4 right-4 absolute opacity-20 text-blue-500'
+              className='top-4 right-4 absolute opacity-15 text-blue-500'
               variants={iconVariants2}
               animate='animate'
             >
               <FaReact size={24} />
             </motion.div>
             <motion.div
-              className='bottom-4 left-4 absolute opacity-20 text-red-500'
+              className='bottom-4 left-4 absolute opacity-15 text-red-500'
               variants={iconVariants3}
               animate='animate'
             >
               <FaPhp size={24} />
             </motion.div>
             <motion.div
-              className='right-4 bottom-4 absolute opacity-20 text-green-500'
+              className='right-4 bottom-4 absolute opacity-15 text-green-500'
               variants={iconVariants4}
               animate='animate'
             >
               <SiMongodb size={24} />
             </motion.div>
             <motion.div
-              className='top-1/2 left-1/2 absolute opacity-20 text-gray-500 transform -translate-x-1/2 -translate-y-1/2'
+              className='top-1/2 left-1/2 absolute opacity-15 text-gray-500 transform -translate-x-1/2 -translate-y-1/2'
               variants={iconVariants5}
               animate='animate'
             >
               <SiExpress size={24} />
             </motion.div>
             <motion.div
-              className='top-1/4 left-1/4 absolute opacity-20 text-red-500'
+              className='top-1/4 left-1/4 absolute opacity-15 text-red-500'
               variants={iconVariants6}
               animate='animate'
             >
               <SiAngular size={24} />
             </motion.div>
             <motion.div
-              className='right-1/4 bottom-1/4 absolute opacity-20 text-blue-500'
+              className='right-1/4 bottom-1/4 absolute opacity-15 text-blue-500'
               variants={iconVariants7}
               animate='animate'
             >
               <SiMysql size={24} />
             </motion.div>
             <motion.div
-              className='top-1/4 right-1/4 absolute opacity-20 text-red-500'
+              className='top-1/4 right-1/4 absolute opacity-15 text-red-500'
               variants={iconVariants8}
               animate='animate'
             >
@@ -170,35 +170,35 @@ function Services () {
           </ul>
           <div className='top-0 left-0 absolute w-full h-full'>
             <motion.div
-              className='top-4 left-4 absolute opacity-20 text-blue-500'
-              variants={iconVariants9}
+              className='top-4 left-4 absolute opacity-15 text-blue-500'
+              variants={iconVariants10}
               animate='animate'
             >
               <FaWordpress size={24} />
             </motion.div>
             <motion.div
-              className='top-4 right-4 absolute opacity-20 text-green-500'
-              variants={iconVariants10}
+              className='top-4 right-4 absolute opacity-15 text-green-500'
+              variants={iconVariants9}
               animate='animate'
             >
               <FaShopify size={24} />
             </motion.div>
             <motion.div
-              className='bottom-4 left-4 absolute opacity-20 text-purple-500'
+              className='bottom-4 left-4 absolute opacity-15 text-purple-500'
               variants={iconVariants1}
               animate='animate'
             >
               <SiWoocommerce size={24} />
             </motion.div>
             <motion.div
-              className='right-4 bottom-4 absolute opacity-20 text-blue-500'
+              className='right-4 bottom-4 absolute opacity-15 text-blue-500'
               variants={iconVariants2}
               animate='animate'
             >
               <SiDrupal size={24} />
             </motion.div>
             <motion.div
-              className='top-1/2 left-1/2 absolute opacity-20 text-orange-500 transform -translate-x-1/2 -translate-y-1/2'
+              className='top-1/2 left-1/2 absolute opacity-15 text-orange-500 transform -translate-x-1/2 -translate-y-1/2'
               variants={iconVariants3}
               animate='animate'
             >
@@ -235,21 +235,21 @@ function Services () {
           </ul>
           <div className='top-0 left-0 absolute w-full h-full'>
             <motion.div
-              className='top-4 left-4 absolute opacity-20 text-pink-500'
+              className='top-4 left-4 absolute opacity-15 text-pink-500'
               variants={iconVariants4}
               animate='animate'
             >
               <FaFigma size={24} />
             </motion.div>
             <motion.div
-              className='top-4 right-4 absolute opacity-20 text-red-500'
+              className='top-4 right-4 absolute opacity-15 text-red-500'
               variants={iconVariants5}
               animate='animate'
             >
               <SiAdobe size={24} />
             </motion.div>
             <motion.div
-              className='bottom-4 left-4 absolute opacity-20 text-pink-500'
+              className='bottom-4 left-4 absolute opacity-15 text-pink-500'
               variants={iconVariants6}
               animate='animate'
             >
