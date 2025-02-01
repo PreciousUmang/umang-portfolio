@@ -5,20 +5,18 @@ import { projects } from '../utils/projects'
 
 function ProjectCarousel () {
   return (
-    <div className='w-full'>
-    <h1 className='text-4xl text-center z'>This is Carousel</h1>
+    <div className='right-0 fixed bg-red-400 mt-[90px] w-1/3 h-[calc(100vh-90px)]'>
       <Carousel
         additionalTransfrom={0}
         autoPlay
         autoPlaySpeed={3000}
         centerMode={false}
-        className=''
+        arrows={false}
+        className='flex items-center mt-[90px]'
         containerClass='container-with-dots'
-        dotListClass=''
         draggable
         focusOnSelect={false}
         infinite
-        itemClass=''
         keyBoardControl
         minimumTouchDrag={80}
         pauseOnHover
@@ -31,7 +29,7 @@ function ProjectCarousel () {
               max: 3000,
               min: 1024
             },
-            items: 3,
+            items: 1,
             partialVisibilityGutter: 40
           },
           mobile: {
@@ -47,7 +45,7 @@ function ProjectCarousel () {
               max: 1024,
               min: 464
             },
-            items: 2,
+            items: 1,
             partialVisibilityGutter: 30
           }
         }}
@@ -62,7 +60,7 @@ function ProjectCarousel () {
       >
         {projects.map(project => (
           <WithStyles
-            description={project.description}
+            description={''}
             headline={project.title}
             image={project.image}
           />

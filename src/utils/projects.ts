@@ -50,7 +50,7 @@ export const projects = [
       'A modern web application built using React to manage and explore books. It features book search, details view, and user-friendly UI with TailwindCSS.',
     link: 'https://github.com/PreciousUmang/Online-Library-System',
     livePreview: 'https://preciousUmang.github.io/Online-Library-System',
-    image: '/umang-portfolio/assets/projects/Online-Library-System.png',
+    image: '/umang-portfolio/assets/projects/bookProject.png',
     tags: ['React', 'TailwindCSS', 'JavaScript', 'HTML'],
     previewStatus: false
   },

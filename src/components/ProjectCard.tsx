@@ -26,7 +26,7 @@ const ProjectCard = ({
   return (
     <motion.div
       {...animationProps}
-      className='flex flex-col justify-between items-center gap-4 rounded w-full transform transition-transform overflow-hidden shrink'
+      className='flex flex-col justify-between items-center gap-4 rounded w-full transform transition-transform shrink'
     >
       <div className='w-full'>
         <img src={project.image} alt={project.title} />
@@ -41,6 +41,8 @@ const ProjectCard = ({
         <p className='text-base text-gray-700'>{project.description}</p>{' '}
       </div>
       <div className='pb-4'>
+
+        {/* Project Tags */}
         <div
           className='flex flex-wrap items-start pt-4 pb-2'
           style={{ minHeight: '60px' }}
@@ -54,13 +56,15 @@ const ProjectCard = ({
             </span>
           ))}
         </div>
-        <div className='flex'>
+
+        {/* Buttons */}
+        <div className='flex justify-center items-center'>
           <motion.button
             onClick={() => window.open(project.link, '_blank')}
             whileHover={{
               scale: 1.1,
-              backgroundColor: '#b3cde0',
-              color: '#ffffff',
+              backgroundColor: '#000000',
+              color: '#EF5350',
               boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)'
             }}
             whileTap={{ scale: 0.95 }}
@@ -73,7 +77,7 @@ const ProjectCard = ({
             onClick={() => window.open(project.livePreview, '_blank')}
             whileHover={{
               scale: 1.1,
-              backgroundColor: '#b2dfdb',
+              backgroundColor: '#66BB6A',
               color: '#ffffff',
               boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)'
             }}
