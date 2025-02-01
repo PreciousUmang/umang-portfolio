@@ -39,7 +39,7 @@ export const projects = [
       'This is a simple To-Do List application built with React and Vite.',
     link: 'https://github.com/PreciousUmang/ToDo-List-Project',
     livePreview: 'https://preciousUmang.github.io/ToDo-List-Project',
-    image: '/umang-portfolio/src/assets/projects/ToDo-List-Project.png',
+    image: '/umang-portfolio/src/assets/projects/ToDo List.png',
     tags: ['React', 'Vite', 'CSS', 'HTML'],
     previewStatus: true
   },
@@ -76,6 +76,17 @@ export const projects = [
     livePreview: 'https://preciousumang.github.io/Weather-App-Project',
     image: '/umang-portfolio/src/assets/projects/Weather App Project.png',
     tags: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS'],
+    previewStatus: true
+  },
+   {
+    id: 8,
+    title: 'Shoppy Globe E-Commerce',
+    description:
+      'ShoppyGlobe is a modern e-commerce app built with React, Redux, and TailwindCSS. It offers a fast, responsive shopping experience with browsing, cart management, and seamless checkout.',
+    link: 'https://github.com/PreciousUmang/Shoppy-Globe-E-Commerce-App',
+    livePreview: 'https://preciousumang.github.io/Shoppy-Globe-E-Commerce-App',
+    image: '/umang-portfolio/src/assets/projects/ShoppyGlobe.png',
+    tags: ['React.js', 'TailwindCSS', 'Redux', 'React Router', 'Lazy Loading'],
     previewStatus: true
   }
 ]
