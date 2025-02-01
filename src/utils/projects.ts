@@ -12,28 +12,17 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'TDog Bootstrap',
+    title: 'Shoppy Globe E-Commerce',
     description:
-      'This is another project developed by me through learning which is using Bootstrap.',
-    link: 'https://github.com/PreciousUmang/p',
-    livePreview: 'https://preciousUmang.github.io/TDog-Bootstrap',
-    image: '/umang-portfolio/assets/projects/TDog Bootstrap.png',
-    tags: ['HTML', 'CSS', 'Bootstrap'],
+      'ShoppyGlobe is a modern e-commerce app built with React, Redux, and TailwindCSS. It offers a fast, responsive shopping experience with browsing, cart management, and seamless checkout.',
+    link: 'https://github.com/PreciousUmang/Shoppy-Globe-E-Commerce-App',
+    livePreview: 'https://preciousumang.github.io/Shoppy-Globe-E-Commerce-App',
+    image: '/umang-portfolio/assets/projects/ShoppyGlobe.png',
+    tags: ['React.js', 'TailwindCSS', 'Redux', 'React Router', 'Lazy Loading'],
     previewStatus: true
   },
   {
     id: 3,
-    title: 'Dice Game',
-    description:
-      'This is a dice game project I prepared while practicing JavaScript DOM manipulation.',
-    link: 'https://github.com/PreciousUmang/DiceGame',
-    livePreview: 'https://preciousUmang.github.io/DiceGame',
-    image: '/umang-portfolio/assets/projects/Dicee.png',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    previewStatus: true
-  },
-  {
-    id: 4,
     title: 'To-Do List Application',
     description:
       'This is a simple To-Do List application built with React and Vite.',
@@ -44,7 +33,7 @@ export const projects = [
     previewStatus: true
   },
   {
-    id: 5,
+    id: 4,
     title: 'Online Library System',
     description:
       'A modern web application built using React to manage and explore books. It features book search, details view, and user-friendly UI with TailwindCSS.',
@@ -53,6 +42,17 @@ export const projects = [
     image: '/umang-portfolio/assets/projects/bookProject.png',
     tags: ['React', 'TailwindCSS', 'JavaScript', 'HTML'],
     previewStatus: false
+  },
+  {
+    id: 5,
+    title: 'Weather App Project',
+    description:
+      'A weather application that fetches and displays weather data for different locations. Built with HTML, CSS, JavaScript, and TailwindCSS.',
+    link: 'https://github.com/PreciousUmang/Weather-App-Project',
+    livePreview: 'https://preciousumang.github.io/Weather-App-Project',
+    image: '/umang-portfolio/assets/projects/Weather App Project.png',
+    tags: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS'],
+    previewStatus: true
   },
   {
     id: 6,
@@ -69,24 +69,24 @@ export const projects = [
   },
   {
     id: 7,
-    title: 'Weather App Project',
+    title: 'TinDog Landing Page',
     description:
-      'A weather application that fetches and displays weather data for different locations. Built with HTML, CSS, JavaScript, and TailwindCSS.',
-    link: 'https://github.com/PreciousUmang/Weather-App-Project',
-    livePreview: 'https://preciousumang.github.io/Weather-App-Project',
-    image: '/umang-portfolio/assets/projects/Weather App Project.png',
-    tags: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS'],
+      'This is another project developed by me through learning which is using Bootstrap.',
+    link: 'https://github.com/PreciousUmang/TDog-Bootstrap',
+    livePreview: 'https://preciousUmang.github.io/TDog-Bootstrap',
+    image: '/umang-portfolio/assets/projects/TDog Bootstrap.png',
+    tags: ['HTML', 'CSS', 'Bootstrap'],
     previewStatus: true
   },
-   {
+  {
     id: 8,
-    title: 'Shoppy Globe E-Commerce',
+    title: 'Dice Game',
     description:
-      'ShoppyGlobe is a modern e-commerce app built with React, Redux, and TailwindCSS. It offers a fast, responsive shopping experience with browsing, cart management, and seamless checkout.',
-    link: 'https://github.com/PreciousUmang/Shoppy-Globe-E-Commerce-App',
-    livePreview: 'https://preciousumang.github.io/Shoppy-Globe-E-Commerce-App',
-    image: '/umang-portfolio/assets/projects/ShoppyGlobe.png',
-    tags: ['React.js', 'TailwindCSS', 'Redux', 'React Router', 'Lazy Loading'],
+      'This is a dice game project I prepared while practicing JavaScript DOM manipulation.',
+    link: 'https://github.com/PreciousUmang/DiceGame',
+    livePreview: 'https://preciousUmang.github.io/DiceGame',
+    image: '/umang-portfolio/assets/projects/Dicee.png',
+    tags: ['HTML', 'CSS', 'JavaScript'],
     previewStatus: true
-  }
+  },
 ]
