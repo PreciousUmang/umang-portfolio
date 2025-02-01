@@ -11,7 +11,7 @@ import Services from './pages/Services';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Router>
+   <Router>
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
