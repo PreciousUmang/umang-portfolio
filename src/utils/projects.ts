@@ -28,7 +28,7 @@ export const projects = [
       'This is a dice game project I prepared while practicing JavaScript DOM manipulation.',
     link: 'https://github.com/PreciousUmang/DiceGame',
     livePreview: 'https://preciousUmang.github.io/DiceGame',
-    image: '/umang-portfolio/src/assets/projects/DiceGame.png',
+    image: '/umang-portfolio/src/assets/projects/Dicee.png',
     tags: ['HTML', 'CSS', 'JavaScript'],
     previewStatus: true
   },
@@ -63,7 +63,7 @@ export const projects = [
     livePreview:
       'https://preciousUmang.github.io/Student-Registration-DOM-Project',
     image:
-      '/umang-portfolio/src/assets/projects/Student-Registration-System.png',
+      '/umang-portfolio/src/assets/projects/SRS.png',
     tags: ['HTML', 'CSS', 'JavaScript'],
     previewStatus: true
   },
