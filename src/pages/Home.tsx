@@ -1,4 +1,3 @@
-import ProfilePic from '../components/ProfilePic'
 import Introduction from '../components/Introduction'
 import About from '../components/About'
 import Services from '../components/Services'
@@ -7,6 +6,11 @@ import Certificates from '../components/Certificates'
 import Skills from '../components/Skills'
 import Reviews from '../components/Reviews'
 import GetStarted from '../components/GetStarted'
+import { lazy, Suspense } from 'react'
+import Loading from '../components/Loading'
+
+const ProfilePic = lazy(() => import('../components/ProfilePic'));
+
 
 function Home () {
   return (
@@ -23,7 +27,9 @@ function Home () {
         </div>
         <div className='md:block hidden'>
           <ProgressBar />
-          <ProfilePic />
+          <Suspense fallback={<Loading />}>
+            <ProfilePic />
+          </Suspense>
         </div>
       </div>
     </div>

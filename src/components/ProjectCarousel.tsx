@@ -60,6 +60,7 @@ function ProjectCarousel () {
       >
         {projects.map(project => (
           <WithStyles
+          key={project.id}
             description={''}
             headline={project.title}
             image={project.image}
